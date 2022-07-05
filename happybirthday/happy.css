@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Satisfy', 'cursive';
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(225, 68, 68, 0.6),rgba(245, 0, 0, 0.3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 360px;
+    height: 560px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.sides {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-side {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFFFF0;
+    transform: rotateY(0deg);
+    transform-origin: left;
+    transition: transform 1s;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+.right-side {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FFFFF0;
+    transform: rotateY(360deg);
+    transform-origin: right;
+    transition: transform 1s;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+.back-side {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1602351447937-745cb720612f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=933&q=80");
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(-300px);
+    transition: z-index .4s step-end, transform 1s,box-shadow 1s;
+    box-shadow: 40px 40px 80px #000;
+    -webkit-transform: translateZ(-300px);
+    -moz-transform: translateZ(-300px);
+    -ms-transform: translateZ(-300px);
+    -o-transform: translateZ(-300px);
+    -webkit-transition: z-index .4s step-end, transform 1s,box-shadow 1s;
+    -moz-transition: z-index .4s step-end, transform 1s,box-shadow 1s;
+    -ms-transition: z-index .4s step-end, transform 1s,box-shadow 1s;
+    -o-transition: z-index .4s step-end, transform 1s,box-shadow 1s;
+}
+
+.card:hover .left-side {
+    transform: rotateY(-360deg);
+    transform-origin: left;
+    transition: transform 2s;
+    -webkit-transition: transform 2s;
+    -moz-transition: transform 2s;
+    -ms-transition: transform 2s;
+    -o-transition: transform 2s;
+}
+
+.card:hover .right-side {
+    transform: rotateY(360deg);
+    transform-origin: right;
+    transition: transform 2s;
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    -webkit-transition: transform 2s;
+    -moz-transition: transform 2s;
+    -ms-transition: transform 2s;
+    -o-transition: transform 2s;
+}
+
+.card:hover .back-side {
+    transform: translateZ(0);
+    z-index: 1;
+    box-shadow: 50px 50px 100px #000;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+}
+
+.name {
+    color: black;
+    font-size: 35px;
+    margin: 20px 5px;
+}
+
+.profession {
+    color: black;
+    font-size: 25px;
+    margin: 20px 5px;
+}
+
+.left-side .name,.left-side .profession {
+    text-align: right;
+}
+
+.biography {
+    align-self: flex-end;
+    font-size: 80px;
+    position: relative;
+    top: -90px;
+    left: -90px;
+    color: white;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.heading {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 40px;
+    position: relative;
+    top: -100px;
+    left: 25%;
+    text-align: center;
+    align-self: center;
+}

@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --level-one: translateZ(6em);
+    --level-two: translateZ(4em);
+    ---level-three: translateZ(3em);
+}
+
+body {
+    height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+    width: 400px;
+}
+
+.card-content {
+    text-align: center;
+    position: relative;
+    padding: 5em;
+    transition: transform 3s;
+    background: pink;
+    -webkit-transition: transform 3s;
+    -moz-transition: transform 3s;
+    -ms-transition: transform 3s;
+    -o-transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 2em;
+}
+
+.card:hover .card-content {
+    transform: rotateY(.5turn);
+    -webkit-transform: rotateY(.5turn);
+    -moz-transform: rotateY(.5turn);
+    -ms-transform: rotateY(.5turn);
+    -o-transform: rotateY(.5turn);
+}
+
+.card-title {
+    font-size: 3rem;
+    transform: var(--level-one);
+    -webkit-transform: var(--level-one);
+    -moz-transform: var(--level-one);
+    -ms-transform: var(--level-one);
+    -o-transform: var(--level-one);
+}
+
+.card-subtilte {
+    transform: var(--level-two);
+    -webkit-transform: var(--level-two);
+    -moz-transform: var(--level-two);
+    -ms-transform: var(--level-two);
+    -o-transform: var(--level-two);
+}
+
+.card-back{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
